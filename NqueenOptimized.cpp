@@ -68,12 +68,6 @@ int main() {
 	cin>>n>>N;
 	vector<vector<int>> a(n,vector<int>(n, 0));
 	
-	
-	for(int i = 0; i < n; i++){
-	    for(int j = 0; j <n ; j++) {
-	        a[i][j] = 0;     
-	    }
-	}
 	if(!func(a, 0)) {
 	    cout<<"Nope Bro~!";
 	}
