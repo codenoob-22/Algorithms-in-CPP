@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <utility>
 using namespace std;
 #define mp make_pair
 int n;
