@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <utility>
 using namespace std;
 #define mp make_pair
 int n;
@@ -43,9 +45,6 @@ void func(vector<vector<int>> a, int jumps, int x, int y) {
 int main() {
     cin>>n;
     vector<vector<int>> a(n, vector<int>(n,0));
-    
-    if(!func(a, 1, 0, 0)) {
-        cout<<"nope Dude\n";
-    }
+    func(a, 1, 0, 0)) 
     return 0;
-}
+} 
