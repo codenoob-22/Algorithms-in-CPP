@@ -1,6 +1,6 @@
 
 // leetcode hard problem solved finally!
-// refer to https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/submissions/
+// refer to https://leetcode.com/problems/tiling-a-rectangle-with-the-fewest-squares/
 // 11 and 13 is hardcoded because it was the only exception in it.
 #include <iostream>
 #include <vector>
