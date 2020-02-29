@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int maxn = 2e5 +7;
+int n;
+int arr[maxn], paint[maxn];
+
+bool check (int x) {
+
+    int maxa = 0;
+    int maxb = x; 
+    
+    for(int i = 0 ;i < n; i++){
+        if(arr[i] < x){
+            if(maxa > arr[i])
+            {
+                return false;
+            }
+            paint[i] = 1;
+            maxa = arr[i];
+        }else if(arr[i] > x){
+            if(maxb > arr[i]) {
+                return false;
+            }
+            paint[i] = 2;
+            maxb = arr[i];
+        }else {
+            if(maxb == x) {
+                paint[i] = 2;
+            }else {
+                paint[i] = 1;
+                maxa = x;
+            }
+        }
+    }
+    
+    return true;
+}
+
+void print_paint(){
+    for(int i = 0 ;i < n; i++)
+    {
+        cout<< paint[i];
+    }
+    cout<<"\n";
+}
+
+void Set(string s) {
+    for(int i = 0 ; i < n; i++) {
+        arr[i] = s[i] - '0';
+    }
+}
+int main() {
+    int t; cin>>t;
+    while(t--) {
+        
+        cin >>n;
+        string s; cin>>s;
+        Set(s);
+        
+        int i;
+        for(i = 0; i <= 9; i++){
+            if(check(i)){
+                print_paint();
+                break;
+            }
+        }
+        
+        if(i > 9){
+            cout<<"-\n";
+        }
+    }
+    return 0;
+}
